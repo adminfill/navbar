@@ -1,0 +1,42 @@
+.navbar .container {
+    width: 500px;
+    height: 60px;
+    background-color: rgba(135, 206, 250, 0.321);
+    border: 2px solid turquoise;
+    border-radius: 30px;
+    margin: 10px auto;
+    position: relative;
+    display: flex;
+}
+.navbar ul {
+    display: inline-flex;
+    margin: 20px 0px;
+    margin-left: 15px;
+    list-style: none;
+    gap: 1rem;
+    align-items: center;
+}
+.navbar ul li{
+    display: flex;
+    position: relative;
+    cursor: pointer;
+}
+.navbar ul li:hover{
+    color: rgb(1, 119, 119);
+}
+.navbar .container:hover{
+    box-shadow: 1px 1px 3px teal;
+}
+.navbar ul li::after{
+    content: "";
+    background-color: rgb(3, 151, 151);
+    height: 2px;
+    position: absolute;
+    width: 100%;
+    bottom: -4px;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+.navbar ul li:hover::after {
+    transform: scaleX(1);
+}
